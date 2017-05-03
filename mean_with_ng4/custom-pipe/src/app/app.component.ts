@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +6,5 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(){
-
-  }
-
-  onFormSubmit( form: NgForm){
-    console.log(form);
-    console.log(form.value);
-  }
+  title = 'I am the sample text!';
 }
