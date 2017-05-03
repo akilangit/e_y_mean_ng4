@@ -1,0 +1,32 @@
+<h1>
+  {{title}}
+</h1>
+<!-- String Interpolation -->
+
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#si">String Interpolation</a></li>
+  <li><a data-toggle="tab" href="#pb">Property Binding</a></li>
+  <li><a data-toggle="tab" href="#eb">Event Binding</a></li>
+  <li><a data-toggle="tab" href="#cpb">Custom Property Binding</a></li>
+  <li><a data-toggle="tab" href="#twb">Two way Binding</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="si" class="tab-pane fade in active container">
+    <app-si></app-si>
+  </div>
+  <div id="pb" class="tab-pane fade container">
+    <app-property-binding></app-property-binding>
+  </div>
+  <div id="eb" class="tab-pane fade container">
+    <app-evt-binding></app-evt-binding>
+  </div>
+  <div id="cpb" class="tab-pane fade container">
+    <!-- reseting the original value here  -->
+    <app-custom-property-binding [someNumber]=20></app-custom-property-binding>
+  </div>
+  <div id="twb" class="tab-pane fade container">
+    <app-two-way-binding></app-two-way-binding>
+  </div>
+</div>
