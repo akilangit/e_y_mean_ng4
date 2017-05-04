@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
+import { TextclipperPipe } from './pipes/textclipper.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EllipsisPipe 
+    EllipsisPipe,
+    TextclipperPipe 
   ],
   imports: [
     BrowserModule,

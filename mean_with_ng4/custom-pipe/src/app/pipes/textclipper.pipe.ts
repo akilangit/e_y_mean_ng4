@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'ellipsis'
+  name: 'textclipper'
 })
-export class EllipsisPipe implements PipeTransform {
+export class TextclipperPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    return value.substr(0, 160) + "...";
+    return null;
   }
 
 }
