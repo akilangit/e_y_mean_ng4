@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RegisterService } from './services/register.service';
 import { NgForm } from '@angular/forms';
 import { Response } from '@angular/http';
 import 'rxjs/Rx';
 import 'rxjs';
+import { RegisterService } from './services/register.service';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,7 @@ import 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  registrationStatus : String;
   constructor(private registerService: RegisterService) {
   }
 
@@ -25,10 +26,18 @@ export class AppComponent {
 
   onFormSubmit(form: NgForm){
     console.log("Called onFormSubmit");
-    this.registerService.onRegister(form)
+    console.log(form.value);
+    this.registerService.onRegister(form.value);
+    
         // .subscribe(
-        //   (response) => console.log(response),
-        //   (error) => console.log(error)
+        //   (response) => {
+        //     console.log(response);
+        //     this.registrationStatus = response.message
+        //   },
+        //   (error) => {
+        //     console.log(error)
+        //     this.registrationStatus = error.message
+        //   }
         // )
     
   }

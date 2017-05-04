@@ -11,12 +11,7 @@ export class RegisterService {
   constructor(private http: Http) { }
 
   onRegister(form: NgForm): RegisterService {
-    console.log("Inside Service");
-    console.log(form);
     this.userData.push(form.value);
-
-    //return this.http.post("/api/register", this.userData);
-
     return this.userData;
   }
 
