@@ -1,0 +1,24 @@
+Backend App
+============
+Step 1: Create Express Project. (It's already created) and run it.
+        express my_contact_manager
+        npm install 
+        npm start
+
+Step 2: In your browser navigate to http://localhost:3000. and you should see the text 'Express'
+
+Step 3: We had a code-walkthrough already. Let's stop the server (ctrl+c) and start the server in debug mode.
+        Click on the Debug  (Ctrl+shift+D) in your Visual Studio Code Editor. It should start the app in debug mode.
+
+Step 4: Go to http://localhost:3000 and see the page with same 'Express' text
+
+Step 5: Go to Project folder, and routes/index.js 
+        res.render('index', { title: 'Express' });
+        and then type the following line
+        res.json({message: "Success"});
+
+Step 6: Now, you have successfully made your rest API's to serve JSON, instead of template
+
+Step 7: 
+
+

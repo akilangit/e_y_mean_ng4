@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Http } from '@angular/http';
-import 'rxjs/Rx';
-import 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class RegisterService {

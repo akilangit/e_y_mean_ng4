@@ -1,0 +1,68 @@
+<div id="main-wrapper">
+  <div style="margin-top:70px;">
+    <div class="starter-template text-center">
+      <h1>My Contact Manager</h1>
+      <p class="lead">My First Contact Manager app built using MEAN Stack with Angular 4 on 6th May 2017</p>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+    <div class="col-md-8">
+      <div class="alert alert-warning">Add contacts here</div>
+      <div class="col-sm-6" *ngFor="let contact of contacts">
+        <div class="panel">
+          <div class="panel-body p-t-10" style="background: #eee;">
+            <div class="media-main">
+              <div class="pull-right btn-group-sm"> 
+                <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit"> 
+                  <i class="glyphicon glyphicon-pencil"></i> 
+                </a> 
+                <button type="button" class="btn btn-danger tooltips" 
+                  (click)="onContactDelete(contact.contactId, contact)"> 
+                  <i class="glyphicon glyphicon-trash"></i> 
+                </button>
+              </div>
+              <div class="info">
+                <h4>{{ contact.fullName }}</h4>
+                <p class="text-muted">{{ contact.phoneNo }}</p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr style="border-top: solid 1px #ccc; margin-top: 0px;margin-bottom: 0px;">
+            <ul class="social-links list-inline p-b-10">
+              <li style="width:60%;">
+                <h5>
+                  <i class="glyphicon glyphicon-envelope"></i> 
+                  <span class="">{{ contact.email }}</span>
+                </h5>
+              </li>
+              <li class="text-right" style="width: 38%;">
+                <h5>
+                  <i class="glyphicon glyphicon-time"></i> 
+                  <span class="">6th May 2017</span>
+                </h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="col-md-4"  style="border-left: solid 1px #ccc;" #f="ngForm" (ngSubmit)="onContactAdd(f)">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter Full Name" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="phoneNo">Phone No</label>
+        <input type="number" class="form-control" id="phoneNo" name="phoneNo" placeholder="Enter Phone No" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter E-Mail" ngModel>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Contact</button>
+    </form>
+  </div>
+
+</div>
+<hr>
