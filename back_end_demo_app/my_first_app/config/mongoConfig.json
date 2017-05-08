@@ -1,0 +1,4 @@
+{
+    "url": "mongodb://localhost/my_contact_manager",
+    "options": {}
+}

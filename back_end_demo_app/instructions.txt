@@ -19,6 +19,5 @@ Step 5: Go to Project folder, and routes/index.js
 
 Step 6: Now, you have successfully made your rest API's to serve JSON, instead of template
 
-Step 7: 
 
 
