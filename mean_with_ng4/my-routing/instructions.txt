@@ -22,6 +22,9 @@ Step 3: In @NgModule decorator, add RouterModule.forRoot(APP_ROUTES) to register
     RouterModule.forRoot(APP_ROUTES) // registering routes -- Import RouterModule from '@angular/router'
   ]`
 
+Step 3.1: 
+Add <router-outlet></router-outlet> in app.component.html 
+
 Step 4: Check the app. The routes should work. But the page will reload. Let's fix it.
 // instead of using <a href> use <a routerLink>. Now check the app. clicking on links should not reload the page.
 `<ul class="nav navbar-nav">
